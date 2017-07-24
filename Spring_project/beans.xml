@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	
+	<bean id="car" class="com.DI.Car">
+	<property  name = "name" value ="Duster"/>
+		<property  name = "perdaycost" value ="60"/>
+	
+	</bean>
+	<bean id="user" class="com.DI.User">
+	<property name = "car" ref = "car"></property>
+	</bean>
+	
+	
+	
+	
+	<bean id="hostel45555" class="com.DI.Hostel">
+	<property name = "hostelname" value ="Sai hostel"/>
+	<property name = "city" value ="pune"/>
+	</bean>
+	
+	
+	<bean id="student" class="com.DI.Student" autowire="constructor">
+	<constructor-arg name = "name" value ="parakar"/>
+	<constructor-arg name = "id" value ="778c"/></bean>
+</beans>
